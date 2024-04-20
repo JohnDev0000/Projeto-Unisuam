@@ -1,10 +1,26 @@
+<?php
+    $paginas = [
+        "home" => "index.php",
+        "games" => "games.php",
+        "promocoes" => "promocoes.php"
+    ];
+
+    $pagina = 'index';
+
+    if (isset($paginas[$pagina]) && $paginas[$pagina] !== '') {
+        include $paginas[$pagina];
+    } else {
+        echo "Página não encontrada";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Gaming News</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
@@ -15,9 +31,9 @@
             </a>
             <div class="nav-links">
                 <ul class="flex">
-                    <li class="hover-link nav-item">Início</li>
-                    <li class="hover-link nav-item">Games</li>
-                    <li class="hover-link nav-item">Promoções</li>
+                    <li class="hover-link nav-item"><a href="index.php">Início</a></li>
+                    <li class="hover-link nav-item"><a href="games.php">Games</a></li>
+                    <li class="hover-link nav-item"><a href="promocoes.php">Promoções</a></li>
                 </ul>
             </div>
             <div class="search-bar flex">
@@ -86,6 +102,6 @@
         
     </template>
 
-    <script src="script.js"></script>
+<!--    <script src="script.js"></script>-->
 </body>
 </html>
