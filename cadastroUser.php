@@ -16,7 +16,7 @@
             <div class="nav-links">
                 <ul class="flex">
                     <li class="hover-link nav-item"><a href = "login.php">Login</a></li>
-                    <li class="hover-link nav-item"><a href= cadastrouser.html>Cadastro</a></li>
+                    <li class="hover-link nav-item"><a href= cadastroUser.php>Cadastro</a></li>
                     <li class="hover-link nav-item"><a href = "index.php">Início</a></li>
                     <li class="hover-link nav-item"><a href= 2fa.php>2FA</a></li>
                     <li class="hover-link nav-item"><a href= "consultaUser.php">Consulta</a></li>
@@ -30,17 +30,53 @@
         </div>
     </nav>
 
-    <h2>Cadastro de Usuário</h2>
-    <form action="register.php" method="post">
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Cadastrar">
-    </form>
+    <div><p><br></p></div>
+    <div><p><br></p></div>
+    <div><p><br></p></div>
+    <div><p><br></p></div>
 
+    <div>
+        <form action="cadastroUser.php" method="post">
+            <label for="username">Nome:</label>
+            <input type="text" id="username" name="username" required><br><br>
 
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required><br><br>
 
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outro">Outro</option>
+            </select><br><br>
+
+            <label for="nome_materno">Nome Materno:</label>
+            <input type="text" id="nome_materno" name="nome_materno" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+
+            <label for="telefone_celular">Telefone Celular:</label>
+            <input type="text" id="telefone_celular" name="telefone_celular" required>
+
+            <label for="telefone_fixo">Telefone Fixo:</label>
+            <input type="text" id="telefone_fixo" name="telefone_fixo">
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento">
+
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
 </body>
 </html>
 
