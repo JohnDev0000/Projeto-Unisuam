@@ -1,26 +1,10 @@
-<?php
-    $paginas = [
-        "home" => "index.php",
-        "games" => "games.php",
-        "promocoes" => "promocoes.php"
-    ];
-
-    $pagina = 'index';
-
-    if (isset($paginas[$pagina]) && $paginas[$pagina] !== '') {
-        include $paginas[$pagina];
-    } else {
-        echo "Página não encontrada";
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Gaming News</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -31,9 +15,12 @@
             </a>
             <div class="nav-links">
                 <ul class="flex">
-                    <li class="hover-link nav-item"><a href="index.php">Início</a></li>
-                    <li class="hover-link nav-item"><a href="games.php">Games</a></li>
-                    <li class="hover-link nav-item"><a href="promocoes.php">Promoções</a></li>
+                    <li class="hover-link nav-item"><a href = login.php>Login</a></li>
+                    <li class="hover-link nav-item"><a href= cadastroUser.php>Cadastro</a></li>
+                    <li class="hover-link nav-item"><a href = index.php>Início</a></li>
+                    <li class="hover-link nav-item"><a href= 2fa.php>2FA</a></li>
+                    <li class="hover-link nav-item"><a href= consultaUser.php>Consulta</a></li>
+
                 </ul>
             </div>
             <div class="search-bar flex">
@@ -45,6 +32,7 @@
     </nav>
 
     <main>
+        <h2>Página Principal</h2>
         <div class="cards-container container flex">
             <div class="card">
                 <div class="card-header">
@@ -102,6 +90,6 @@
         
     </template>
 
-<!--    <script src="script.js"></script>-->
+    <script src="script.js"></script>
 </body>
 </html>

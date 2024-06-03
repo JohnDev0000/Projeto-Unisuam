@@ -20,19 +20,114 @@
     color: var(--primary-text-color);
     font-size: 25px;
     background-color: #121212;
-    
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    position: relative;
+ 
+              
  }
+
+
+
+ form {
+    background-color: #FF8C00; 
+    padding: 50px;
+    border-radius: 10px;
+    width: 800px;
+    margin: 0 auto;
+    font-size: 30px;
+ 
+  
+   
+    
+    
+}
+label {
+    color: #183b56; /* Azul */
+    font-weight: bold;
+    font-size: 30px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+input[type="submit"] {
+    background-color: #183b56; /* Azul */
+    color: #FFFFFF; /* Branco */
+    cursor: pointer;
+    font-size: 20px;
+}
+
+a {
+    color:  #183b56; /* Azul */
+    text-decoration: none;
+    margin: 10px 0;
+    display:flx;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: #00008B; /* Azul escuro */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
 
  p{
     font-family: "Roboto", sans-serif;
     color: var(--secondary-text-color);
     line-height: 1.4rem;
-    color:#FF8C00
+    color:#183b56; 
+    text-align: center;
+    margin: 10px 0;
+    
+   
+ }
+
+ h2{
+    color:orange;
+    position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            text-align: center;
+   
+    
  }
 
  h3{
    color: black
 
+ }
+
+ h4{
+    color: Orange;
+    font-size: 60px;
+    text-align: center;
+    justify-content:center;
  }
 
  h6{
@@ -46,6 +141,7 @@
 
  ul{
     list-style: none;
+    
  }
 
  .flex{
@@ -67,12 +163,15 @@
     z-index: 99;
     left: 0;
     right: 0;
+    
 
  }
 
  .main-nav{
     justify-content: space-between;
     padding-block: 8px;
+    
+    
  }
 
 
@@ -84,6 +183,7 @@
 
  .nav-links ul{
     gap: 16px;
+    
  }
 
  .hover-link{
@@ -168,3 +268,41 @@
  .news-source{
     margin-block: 12px;
  }
+
+
+
+
+
+
+
+
+
+ h5 {
+   text-align: center;
+   color:#183b56; 
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+   background-color: #ffffff; 
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+th, td {
+   padding: 10px;
+   border-bottom: 1px solid #ddd;
+   color:#183b56; 
+}
+
+th {
+   background-color: #f39c12; 
+   color:#183b56; 
+   text-align: left;
+}
+
+tr:hover {
+   background-color: #f0f0f0; 
+}
