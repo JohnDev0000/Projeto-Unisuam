@@ -17,7 +17,7 @@
                 $_SESSION['usuario_id'] = $user['id'];
                 $_SESSION['usuario_nome'] = $user['nome'];
 
-                header("Location: ../index.php");
+                header("Location: ../mainpage.php");
                 exit();
             } else {
                 $error_message = 'Senha incorreta.';
