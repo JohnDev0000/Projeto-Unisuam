@@ -30,7 +30,6 @@
             </div>
         </div>
     </nav>
-    <h2>Consulta de Usuário</h2>
 
 
 
@@ -81,6 +80,10 @@
         </tbody>
     </table>
 
+
+    <BR><BR><BR><BR><BR><BR><BR><BR>
+
+    <h3 style="color: white">Lista Todos os usuarios:</h3><br>
     <form action="Scripts/getUser.php" method="get">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome"><br><br>
@@ -91,7 +94,13 @@
         <input type="submit" value="Pesquisar">
     </form>
 
+    <h3 style="color: white">Lista Usuario por ID:</h3><br>
+    <form action="Scripts/getUserById.php" method="get">
+        <label for="nome">Nome do Usuário:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
 
+        <input type="submit" value="Pesquisar">
+    </form>
 
 </body>
 </html>

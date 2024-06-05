@@ -52,6 +52,12 @@
             return $this->execute($query, $params);
         }
 
+//        public function selectById($id) {
+//            $query = 'SELECT * FROM ' . $this->table . ' WHERE id = ?';
+//            $stmt = $this->execute($query, [$id]);
+//            return $stmt->fetch(PDO::FETCH_ASSOC);
+//        }
+
         public function update($where,$values){
             //DADOS DA QUERY
             $fields = array_keys($values);
