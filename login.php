@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'processa.php';
+    include 'Scripts/processa.php';
 
 //    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //        $database = new Database('usuarios');

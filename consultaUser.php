@@ -69,7 +69,7 @@
             </tr>
 
             <tr>
-                <td>Felipe Luiz</td>
+                <td>Felipe José</td>
                 <td>23205414</td>
             </tr>
 
@@ -77,11 +77,19 @@
                 <td>Thiago Khalil</td>
                 <td>22203023</td>
             </tr>
-
-
            
         </tbody>
     </table>
+
+    <form action="Scripts/getUser.php" method="get">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf"><br><br>
+
+        <input type="submit" value="Pesquisar">
+    </form>
 
 
 
