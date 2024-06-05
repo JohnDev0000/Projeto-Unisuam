@@ -1,23 +1,5 @@
 <?php
-    session_start();
-    include 'processa.php';
-
-//    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//        $database = new Database('usuarios');
-//
-//        $dados_cadastro = [
-//            'login' => $_POST['login'],
-//            'senha' => $_POST['senha']
-//        ];
-//
-//        $select_data = $database->select('login = :login', null, null, '*', $dados_cadastro);
-//
-//        if ($select_data->rowCount() > 0) {
-//            echo "Usuário logado com sucesso!";
-//        } else {
-//            echo "Usuário ou senha incorretos!";
-//        }
-//    }
+    require __DIR__.'/vendor/autoload.php';
 ?>
 
 <!DOCTYPE html>
@@ -68,11 +50,11 @@
     
     <h2>Login do Usuário</h2>
     <form action="login.php" method="post">
-        <label for="login">Usuário:</label>
-        <input type="text" id="login" name="login" required><br><br>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required><br><br>
 
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required><br><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br><br>
 
         <p><a href="AlteraSenha.php">Esqueceu a senha?</a></p>
         <input type="submit"  onclick="funcao1()"  value="Login"> 

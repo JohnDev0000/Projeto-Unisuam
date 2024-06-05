@@ -16,7 +16,7 @@
             <div class="nav-links">
                 <ul class="flex">
                     <li class="hover-link nav-item"><a href = "login.php">Login</a></li>
-                    <li class="hover-link nav-item"><a href = cadastroUser.php>Cadastro</a></li>
+                    <li class="hover-link nav-item"><a href= cadastroUser.php>Cadastro</a></li>
                     <li class="hover-link nav-item"><a href = "index.php">Início</a></li>
                     <li class="hover-link nav-item"><a href= 2fa.php>2FA</a></li>
                     <li class="hover-link nav-item"><a href= consultaUser.php>Consulta</a></li>

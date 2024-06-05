@@ -79,6 +79,10 @@
          */
         public $senha;
 
+        /**
+         * Método responsável por atualizar a vaga no banco
+         * @return boolean
+         */
         public function cadastrar()
         {
             // Converte a data para formato do Banco de dados
@@ -97,6 +101,7 @@
                 'login' => $this->login,
                 'senha' => $this->senha
             ]);
+            echo "<pre>"; print_r($this); echo "</pre>"; exit;
             return true;
         }
 
@@ -150,22 +155,9 @@
             return (new Database('usuarios'))->select('id = ' . $id)
                 ->fetchObject(self::class);
         }
-    }
 
-//        /**
-//         * @param int $id
-//         * @param string $nome
-//         * @param string $data_nascimento
-//         * @param Sexo $sexo
-//         * @param string $nome_materno
-//         * @param string $cpf
-//         * @param int $telefone_celular
-//         * @param int $telefone_fixo
-//         * @param string $endereco
-//         * @param string $complemento
-//         * @param string $login
-//         * @param string $senha
-//         */
+
+
 //        public function __construct(int $id,
 //                                    string $nome,
 //                                    string $data_nascimento,
@@ -192,3 +184,20 @@
 //            $this->login = $login;
 //            $this->senha = $senha;
 //        }
+    }
+
+//        /**
+//         * @param int $id
+//         * @param string $nome
+//         * @param string $data_nascimento
+//         * @param Sexo $sexo
+//         * @param string $nome_materno
+//         * @param string $cpf
+//         * @param int $telefone_celular
+//         * @param int $telefone_fixo
+//         * @param string $endereco
+//         * @param string $complemento
+//         * @param string $login
+//         * @param string $senha
+//         */
+

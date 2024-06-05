@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +18,7 @@
             <div class="nav-links">
                 <ul class="flex">
                     <li class="hover-link nav-item"><a href = "login.php">Login</a></li>
-                    <li class="hover-link nav-item"><a href= "cadastroUser.php">Cadastro</a></li>
+                    <li class="hover-link nav-item"><a href= cadastroUser.php>Cadastro</a></li>
                     <li class="hover-link nav-item"><a href = "index.php">Início</a></li>
                     <li class="hover-link nav-item"><a href= 2fa.php>2FA</a></li>
                     <li class="hover-link nav-item"><a href= "consultaUser.php">Consulta</a></li>
@@ -28,10 +30,7 @@
 
             </div>
         </div>
-
     </nav>
-
-
 
     <div><p><br></p></div>
     <div><p><br></p></div>
@@ -39,7 +38,7 @@
     <div><p><br></p></div>
 
     <div>
-        <form action="login.php" method="post">
+        <form action="processa.php" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required><br><br>
 
@@ -77,12 +76,10 @@
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required><br><br>
 
+<!--            <button type="submit">Enviar</button>-->
             <input type="submit" name="Submit" value="Cadastrar">
         </form>
     </div>
-
-
-
 </body>
 </html>
 

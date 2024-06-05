@@ -52,6 +52,7 @@
             try{
                 $this->connection = new PDO('mysql:host='.self::HOST.';dbname='.self::NAME,self::USER,self::PASS);
                 $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+                echo 'Conexão realizada com sucesso!';
             }catch(PDOException $e){
                 die('ERROR: '.$e->getMessage());
             }
@@ -62,7 +63,8 @@
          * @param  array  $params
          * @return PDOStatement
          */
-        public function execute($query,$params = []){
+        public function execute($query,$params = [])
+        {
             try{
                 $statement = $this->connection->prepare($query);
                 $statement->execute($params);
