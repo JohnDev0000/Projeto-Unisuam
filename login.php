@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'Scripts/processa.php';
+//    include 'Scripts/login_process.php';
 
 //    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //        $database = new Database('usuarios');
@@ -28,15 +28,15 @@
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
     
-    <script>
-        function funcao1() {
-        event.preventDefault();
-
-        alert("Usuário ou Senha incorretos!");
-        window.location.href = window.location.href;
-        }
-
-    </script>
+<!--    <script>-->
+<!--        function funcao1() {-->
+<!--        event.preventDefault();-->
+<!---->
+<!--        alert("Usuário ou Senha incorretos!");-->
+<!--        window.location.href = window.location.href;-->
+<!--        }-->
+<!---->
+<!--    </script>-->
     
 
 </head>
@@ -67,7 +67,7 @@
 
     
     <h2>Login do Usuário</h2>
-    <form action="login.php" method="post">
+    <form action="Scripts/login_process.php" method="post">
         <label for="login">Usuário:</label>
         <input type="text" id="login" name="login" required><br><br>
 

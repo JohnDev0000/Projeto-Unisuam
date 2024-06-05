@@ -1,3 +1,7 @@
+<?php
+//    include 'Scripts/processa.php';
+//?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +43,7 @@
     <div><p><br></p></div>
 
     <div>
-        <form action="login.php" method="post">
+        <form action="Scripts/processa.php" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required><br><br>
 

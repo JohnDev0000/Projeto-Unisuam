@@ -1,5 +1,5 @@
 <?php
-    include 'Classes/database.php';
+    include '../Classes/database.php';
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -23,9 +23,10 @@
 
         if ($insert_data) {
             echo "Usuário cadastrado com sucesso. ID: {$insert_data}";
+            header("Location: ../login.php");
+            exit();
         } else {
             echo "Erro ao cadastrar usuário.";
         }
-
     }
 ?>
