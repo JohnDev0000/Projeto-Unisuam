@@ -27,8 +27,12 @@
                     <input type="text" class="news-input" placeholder="Pesquise">
                     <button class="search-button">Pesquisar</button>
 
+                    <li><a href="userpage.php">Minha Conta</a></li>
+                    <li><a href="consultaUser.php">Consultar Usuários</a></li>
+                    <li><a href="logout.php">Sair</a></li>
                 </div>
             </div>
+
         </nav>
 
         <main>
