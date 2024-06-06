@@ -8,28 +8,7 @@
 </head>
 <body>
     
-    <nav>
-        <div class="main-nav container flex">
-            <a href="#" class="Uni-Logo">
-                <img src="Imagens/Unisuam LOGO.png" alt="Uni Logo">
-            </a>
-            <div class="nav-links">
-                <ul class="flex">
-                    <li class="hover-link nav-item"><a href = "login.php">Login</a></li>
-                    <li class="hover-link nav-item"><a href= "cadastroUser.php">Cadastro</a></li>
-                    <li class="hover-link nav-item"><a href = "mainpage.php">Início</a></li>
-                    <li class="hover-link nav-item"><a href= 2fa.php>2FA</a></li>
-                    <li class="hover-link nav-item"><a href= "consultaUser.php">Consulta</a></li>
-
-                </ul>
-            </div>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="Pesquise">
-                <button class="search-button">Pesquisar</button>
-
-            </div>
-        </div>
-    </nav>
+    <?php include 'header.php'; ?>
 
     <h2>Alteração de Senha</h2>
     <form action="Scripts/alterar_senha.php" method="post">

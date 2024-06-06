@@ -20,22 +20,14 @@
             <div class="nav-links">
                 <ul class="flex">
                     <li class="hover-link nav-item"><a href = "login.php">Login</a></li>
-                    <li class="hover-link nav-item"><a href= "cadastroUser.php">Cadastro</a></li>
+<!--                    <li class="hover-link nav-item"><a href= "cadastroUser.php">Cadastro</a></li>-->
                     <li class="hover-link nav-item"><a href = "mainpage.php">Início</a></li>
                     <li class="hover-link nav-item"><a href= 2fa.php>2FA</a></li>
-                    <li class="hover-link nav-item"><a href= "consultaUser.php">Consulta</a></li>
                 </ul>
-            </div>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="Pesquise">
-                <button class="search-button">Pesquisar</button>
-
             </div>
         </div>
 
     </nav>
-
-
 
     <div><p><br></p></div>
     <div><p><br></p></div>

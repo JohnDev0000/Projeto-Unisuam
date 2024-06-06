@@ -21,18 +21,15 @@
             </a>
             <div class="nav-links">
                 <ul class="flex">
-                    <li class="hover-link nav-item"><a href = login.php>Login</a></li>
+<!--                    <li class="hover-link nav-item"><a href = login.php>Login</a></li>-->
                     <li class="hover-link nav-item"><a href= cadastroUser.php>Cadastro</a></li>
                     <li class="hover-link nav-item"><a href = "mainpage.php">Início</a></li>
-                    <li class="hover-link nav-item"><a href= 2fa.php>2FA</a></li>
-                    <li class="hover-link nav-item"><a href= consultaUser.php>Consulta</a></li>
                 </ul>
             </div>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="Pesquise">
-                <button class="search-button">Pesquisar</button>
-
-            </div>
+<!--            <div class="search-bar flex">-->
+<!--                <input type="text" class="news-input" placeholder="Pesquise">-->
+<!--                <button class="search-button">Pesquisar</button>-->
+<!--            </div>-->
         </div>
     </nav>
 
@@ -44,8 +41,6 @@
 
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required><br><br>
-
-        <p><a href="" >Trocar a senha</a></p>
 
         <p><a href="#" onclick="forgotPassword()">Esqueceu a senha?</a></p>
 

@@ -12,10 +12,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Minha Conta</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="CSS/userpage.css">
     </head>
     <body>
-
         <nav>
+            <?php include 'header.php'; ?>
             <ul>
                 <li><a href="mainpage.php">Página Principal</a></li>
                 <li><a href="consultaUser.php">Consultar Usuários</a></li>
@@ -25,4 +27,7 @@
 
         <h1>Minha Conta</h1>
 
-        <a href="trocarSenha.php"><h2>Alterar Senha</h2></a>
+        <div class="user_container">
+            <h1>Detalhes da Conta do Usuário</h1>
+            <?php include 'Scripts/getUserData.php'; ?>
+        </div>
