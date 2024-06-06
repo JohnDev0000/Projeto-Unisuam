@@ -32,16 +32,15 @@
     </nav>
 
     <h2>Alteração de Senha</h2>
-    <form action="change_password.php" method="post">
-        <label for="Email">Email</label>
-        <input type="email" id="old_password" name="old_password" required><br><br>
+    <form action="Scripts/alterar_senha.php" method="post">
+        <label for="senha_atual">Senha Atual:</label>
+        <input type="password" id="senha_atual" name="senha_atual" required><br><br>
 
-        <label for="new_password">Nova Senha:</label>
-        <input type="password" id="new_password" name="new_password" required><br><br>
-        
+        <label for="nova_senha">Nova Senha:</label>
+        <input type="password" id="nova_senha" name="nova_senha" required><br><br>
 
-        <label for="confirm_password">Confirme a Nova Senha:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+        <label for="confirmar_senha">Confirmar Nova Senha:</label>
+        <input type="password" id="confirmar_senha" name="confirmar_senha" required><br><br>
 
         <input type="submit" value="Alterar Senha">
             

@@ -28,6 +28,10 @@
     }
 
     if (isset($error_message)) {
-        echo "<script>alert('$error_message'); window.location.href = '../index.php';</script>";
+        echo "
+            <script>
+                alert('$error_message'); 
+                window.location.href = '../login.php';
+            </script>";
     }
 ?>

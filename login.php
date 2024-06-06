@@ -1,23 +1,5 @@
 <?php
     session_start();
-//    include 'Scripts/login_process.php';
-
-//    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//        $database = new Database('usuarios');
-//
-//        $dados_cadastro = [
-//            'login' => $_POST['login'],
-//            'senha' => $_POST['senha']
-//        ];
-//
-//        $select_data = $database->select('login = :login', null, null, '*', $dados_cadastro);
-//
-//        if ($select_data->rowCount() > 0) {
-//            echo "Usuário logado com sucesso!";
-//        } else {
-//            echo "Usuário ou senha incorretos!";
-//        }
-//    }
 ?>
 
 <!DOCTYPE html>
@@ -27,17 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
-    
-<!--    <script>-->
-<!--        function funcao1() {-->
-<!--        event.preventDefault();-->
-<!---->
-<!--        alert("Usuário ou Senha incorretos!");-->
-<!--        window.location.href = window.location.href;-->
-<!--        }-->
-<!---->
-<!--    </script>-->
-    
 
 </head>
 <body>
@@ -74,12 +45,31 @@
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required><br><br>
 
-        <p><a href="AlteraSenha.php">Esqueceu a senha?</a></p>
-        <input type="submit"  onclick="funcao1()"  value="Login"> 
+        <p><a href="#" onclick="forgotPassword()">Esqueceu a senha?</a></p>
+
+        <input type="submit" value="Login">
 
     </form>
 
+    <script>
+        function forgotPassword() {
+            let token = generateToken();
 
+            alert("Seu token de redefinição de senha é: " + token);
+
+            let userToken = prompt("Insira o token de redefinição de senha:");
+
+            if (userToken === token) {
+                window.location.href = "alteraSenha.php";
+            } else {
+                alert("Token incorreto. Tente novamente.");
+            }
+        }
+
+        function generateToken() {
+            return [...Array(50)].map(() => Math.random().toString(36)[2]).join('');
+        }
+    </script>
 
 
     
