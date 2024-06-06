@@ -41,6 +41,6 @@
     if ($response['success']) {
         echo "<script>alert('{$response['message']}'); window.location.href = '../mainpage.php';</script>";
     } else {
-        echo "<script>alert('{$response['message']}'); window.location.href = '../alteraSenha.php';</script>";
+        echo "<script>alert('{$response['message']}'); window.location.href = '../redefinirSenha_process.php';</script>";
     }
 ?>

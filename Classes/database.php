@@ -58,12 +58,16 @@
 //            return $stmt->fetch(PDO::FETCH_ASSOC);
 //        }
 
-        public function update($where,$values){
+        public function update($where, $values, $params = []) {
             $fields = array_keys($values);
 
-            $query = 'UPDATE '.$this->table.' SET '.implode('=?,',$fields).'=? WHERE '.$where;
+            $set_clause = implode('=?, ', $fields) . '=?';
 
-            $this->execute($query,array_values($values));
+            $query = 'UPDATE ' . $this->table . ' SET ' . $set_clause . ' WHERE ' . $where;
+
+            $all_params = array_merge(array_values($values), $params);
+
+            $this->execute($query, $all_params);
 
             return true;
         }

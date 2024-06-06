@@ -32,7 +32,10 @@
     </nav>
 
     <h2>Alteração de Senha</h2>
-    <form action="Scripts/alterar_senha.php" method="post">
+    <form action="Scripts/redefinirSenha_process.php" method="post">
+
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required><br><br>
 
         <label for="nova_senha">Nova Senha:</label>
         <input type="password" id="nova_senha" name="nova_senha" required><br><br>

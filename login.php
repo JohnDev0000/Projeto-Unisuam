@@ -39,11 +39,13 @@
     
     <h2>Login do Usuário</h2>
     <form action="Scripts/login_process.php" method="post">
-        <label for="login">Usuário:</label>
+        <label for="login">Login:</label>
         <input type="text" id="login" name="login" required><br><br>
 
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required><br><br>
+
+        <p><a href="" >Trocar a senha</a></p>
 
         <p><a href="#" onclick="forgotPassword()">Esqueceu a senha?</a></p>
 
@@ -60,7 +62,7 @@
             let userToken = prompt("Insira o token de redefinição de senha:");
 
             if (userToken === token) {
-                window.location.href = "alteraSenha.php";
+                window.location.href = "RedefinicaoSenha.php";
             } else {
                 alert("Token incorreto. Tente novamente.");
             }

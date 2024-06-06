@@ -15,7 +15,7 @@
             if (password_verify($senha, $user['senha'])) {
                 session_start();
                 $_SESSION['usuario_id'] = $user['id'];
-                $_SESSION['usuario_nome'] = $user['nome'];
+                $_SESSION['usuario_login'] = $user['login'];
 
                 header("Location: ../mainpage.php");
                 exit();
