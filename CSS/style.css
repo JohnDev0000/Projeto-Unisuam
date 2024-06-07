@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
 
- *{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
- }
 
- :root{
+}
+
+:root {
     --primary-text-color: #183b56;
     --secondary-text-color: #577592;
     --accent-color: #2891e1;
     --accent-color-dark: #1d69a3;
 
- }
+}
 
- body{
+body {
     font-family: "Poppins", sans-serif;
     color: var(--primary-text-color);
     font-size: 25px;
@@ -27,30 +27,24 @@
     height: 80vh;
     margin: 0;
     position: relative;
- 
-              
- }
 
+}
 
-
- form {
-    background-color: #FF8C00; 
+form {
+    background-color: #FF8C00;
     padding: 50px;
     border-radius: 10px;
     width: 800px;
     margin: 0 auto;
     font-size: 30px;
- 
-  
-   
-    
-    
 }
+
 label {
-    color: #183b56; /* Azul */
+    color: #183b56;
     font-weight: bold;
     font-size: 30px;
 }
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -63,25 +57,26 @@ input[type="submit"] {
     box-sizing: border-box;
     font-size: 20px;
 }
+
 input[type="submit"] {
-    background-color: #183b56; /* Azul */
-    color: #FFFFFF; /* Branco */
+    background-color: #183b56;
+    color: #FFFFFF;
     cursor: pointer;
     font-size: 20px;
 }
 
 a {
-    color:  #183b56; /* Azul */
+    color: #183b56;
     text-decoration: none;
     margin: 10px 0;
-    display:flx;
+    display: flx;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 input[type="submit"]:hover {
-    background-color: #00008B; /* Azul escuro */
+    background-color: #00008B;
 }
 
 a:hover {
@@ -89,73 +84,65 @@ a:hover {
 }
 
 
-
-
-
-
- p{
+p {
     font-family: "Roboto", sans-serif;
     color: var(--secondary-text-color);
     line-height: 1.4rem;
-    color:#183b56; 
+    color: #183b56;
     text-align: center;
     margin: 10px 0;
-    
-   
- }
 
- h2{
-    color:orange;
-    position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            text-align: center;
-   
-    
- }
 
- h3{
-   color: black
+}
 
- }
+h2 {
+    color: orange;
+}
 
- h4{
+.h2_mainpage {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+h3 {
+    color: black
+
+}
+
+h4 {
     color: Orange;
     font-size: 60px;
     text-align: center;
-    justify-content:center;
- }
+    justify-content: center;
+}
 
- h6{
-   color:black
- }
+h6 {
+    color: black
+}
 
- a{
-    text-decoration:none;
+a {
+    text-decoration: none;
 
- }
+}
 
- ul{
+ul {
     list-style: none;
-    
- }
 
- .flex{
+}
+
+.flex {
     display: flex;
     align-items: center;
- }
+}
 
- .container{
-    max-width:1180px;
+.container {
+    max-width: 1180px;
     margin-inline: auto;
     overflow: hidden;
- }
+}
 
- nav{
+nav {
     background-color: #FF8C00;
     box-shadow: 0 0 4px #bbd0e2;
     position: fixed;
@@ -163,145 +150,134 @@ a:hover {
     z-index: 99;
     left: 0;
     right: 0;
-    
+}
 
- }
-
- .main-nav{
+.main-nav {
     justify-content: space-between;
     padding-block: 8px;
-    
-    
- }
+}
 
 
-
- .Uni-Logo img{
+.Uni-Logo img {
     width: 120px;
-    box-shadow:#121212;
- }
+    box-shadow: #121212;
+}
 
- .nav-links ul{
+.nav-links ul {
     gap: 16px;
-    
- }
 
- .hover-link{
+}
+
+.hover-link {
     cursor: pointer;
- }
+}
 
- .hover-link:hover {
+.hover-link:hover {
     color: white;
 
- }
+}
 
- .hover-link:active{
+.hover-link:active {
     color: orangered;
- }
+}
 
- .search-bar{
+.search-bar {
     height: 32px;
     gap: 8px;
- }
+}
 
- .news-input{
+.news-input {
     width: 200px;
     height: 100%;
     padding-inline: 12px;
     border-radius: 4px;
     border: 2px solid #bbd0e2;
     font-family: "Roboto", sans-serif;
- }
+}
 
- .search-button{
+.search-button {
     background-color: var(--accent-color);
     color: white;
     padding: 8px 24px;
     border-radius: 4px;
     cursor: pointer;
     font-family: "Roboto", sans-serif;
- }
+}
 
- .search-button:hover{
+.search-button:hover {
     background-color: var(--accent-color-dark);
- }
+}
 
- main{
+main {
     padding-block: 20px;
     margin-top: 90px;
- }
+}
 
- .cards-container{
+.cards-container {
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 20px;
-    align-items: start;
- }
+    margin-top: 70px;
+    align-items: normal;
+}
 
- .card{
-    width:360px;
+.card {
+    width: 360px;
     min-height: 400px;
     box-shadow: 0 0 4px #d4ecff;
     border-radius: 4px;
-    cursor:pointer;
+    cursor: pointer;
     background-color: #FF8C00;
     overflow: hidden;
     transition: all 0.3 ease;
- }
+}
 
- .card:hover{
+.card:hover {
     box-shadow: 1px 1px 8px #d4ecff;
     background-color: #f9fdff;
     transform: translateY(-2px);
- }
+}
 
- .card-header img{
-   width: 100%;
-   height: 200px;
-   object-fit: cover;
- }
+.card-header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
- .card-content{
-   padding: 12px;
- }
+.card-content {
+    padding: 12px;
+}
 
- .news-source{
+.news-source {
     margin-block: 12px;
- }
+}
 
-
-
-
-
-
-
-
-
- h5 {
-   text-align: center;
-   color:#183b56; 
+h5 {
+    text-align: center;
+    color: #183b56;
 }
 
 table {
-   width: 100%;
-   border-collapse: collapse;
-   background-color: #ffffff; 
-   border-radius: 10px;
-   overflow: hidden;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
-   padding: 10px;
-   border-bottom: 1px solid #ddd;
-   color:#183b56; 
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #183b56;
 }
 
 th {
-   background-color: #f39c12; 
-   color:#183b56; 
-   text-align: left;
+    background-color: #f39c12;
+    color: #183b56;
+    text-align: left;
 }
 
 tr:hover {
-   background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }

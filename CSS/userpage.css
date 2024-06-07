@@ -1,12 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
     padding: 20px;
 }
 
 .user_container {
+    margin-top: 50px;
     max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
+    background-color: #FF8C00;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

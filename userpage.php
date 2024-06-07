@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Minha Conta</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/userpage.css">
     </head>
     <body>
@@ -25,9 +25,13 @@
             </ul>
         </nav>
 
-        <h1>Minha Conta</h1>
+        <div style="display: flex; flex-direction: row; margin-top: 70px">
+            <div class="user_container">
+                <h1>Detalhes da Conta do Usuário</h1>
+                <?php include 'Scripts/getUserData.php'; ?>
+            </div>
 
-        <div class="user_container">
-            <h1>Detalhes da Conta do Usuário</h1>
-            <?php include 'Scripts/getUserData.php'; ?>
+            <a href="trocarSenha.php" style=" padding: 20px; margin-top: 50px"><h3 style="color: orange;">Alterar Senha</h3></a>
         </div>
+    </body>
+</html>

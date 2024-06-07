@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 
 </head>
 <body>
@@ -41,6 +41,9 @@
 
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required><br><br>
+
+        <label for="admin_password">Senha de Administrador (Apenas Administradores):</label>
+        <input type="password" id="admin_password" name="admin_password"><br><br>
 
         <p><a href="#" onclick="forgotPassword()">Esqueceu a senha?</a></p>
 
