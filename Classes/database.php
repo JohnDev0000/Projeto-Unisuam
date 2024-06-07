@@ -1,4 +1,5 @@
 <?php
+
     class Database {
         private $dsn = 'mysql:host=localhost;dbname=pimba';
         private $user = 'root';
@@ -7,29 +8,30 @@
         public $connection;
 
 
-        public function __construct(string $table = null) {
+        public function __construct(string $table = null)
+        {
             $this->table = $table;
             $this->setConnection();
         }
 
         private function setConnection()
         {
-            try{
+            try {
                 $this->connection = new PDO($this->dsn, $this->user, $this->password);
-                $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            }catch(PDOException $e){
-                die('ERROR: '.$e->getMessage());
+                $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (PDOException $e) {
+                die('ERROR: ' . $e->getMessage());
             }
         }
 
-        public function execute($query,$params = [])
+        public function execute($query, $params = [])
         {
-            try{
+            try {
                 $statement = $this->connection->prepare($query);
                 $statement->execute($params);
                 return $statement;
-            }catch(PDOException $e){
-                die('ERROR: '.$e->getMessage());
+            } catch (PDOException $e) {
+                die('ERROR: ' . $e->getMessage());
             }
         }
 
@@ -42,23 +44,20 @@
             return $this->connection->lastInsertId();
         }
 
-        public function select($where = null, $order = null, $limit = null, $fields = '*', $params = []){
-            $where = strlen($where) ? 'WHERE '.$where : '';
-            $order = strlen($order) ? 'ORDER BY '.$order : '';
-            $limit = strlen($limit) ? 'LIMIT '.$limit : '';
+        public function select($where = null, $order = null, $limit = null, $fields = '*', $params = [])
+        {
+            $where = strlen($where) ? 'WHERE ' . $where : '';
+            $order = strlen($order) ? 'ORDER BY ' . $order : '';
+            $limit = strlen($limit) ? 'LIMIT ' . $limit : '';
 
-            $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.' '.$limit;
+            $query = 'SELECT ' . $fields . ' FROM ' . $this->table . ' ' . $where . ' ' . $order . ' ' . $limit;
 
             return $this->execute($query, $params);
         }
 
-//        public function selectById($id) {
-//            $query = 'SELECT * FROM ' . $this->table . ' WHERE id = ?';
-//            $stmt = $this->execute($query, [$id]);
-//            return $stmt->fetch(PDO::FETCH_ASSOC);
-//        }
 
-        public function update($where, $values, $params = []) {
+        public function update($where, $values, $params = [])
+        {
             $fields = array_keys($values);
 
             $set_clause = implode('=?, ', $fields) . '=?';
@@ -72,8 +71,9 @@
             return true;
         }
 
-        public function delete($where){
-            $query = 'DELETE FROM '.$this->table.' WHERE '.$where;
+        public function delete($where)
+        {
+            $query = 'DELETE FROM ' . $this->table . ' WHERE ' . $where;
 
             $this->execute($query);
 
@@ -82,5 +82,4 @@
 
     }
 
-    $ob = new Database();
 ?>

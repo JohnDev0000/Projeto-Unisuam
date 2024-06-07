@@ -1,22 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2891e1;
+    --accent-color-dark: #1d69a3;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+
+    color: var(--primary-text-color);
+    font-size: 25px;
+    background-color: #121212;
+
+}
+
+.content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+}
+
+a {
+    color: #183b56;
+    text-decoration: none;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .index-content {
+    width: 100%;
+    display: flex;
     padding-top: 120px;
     position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
     margin-right: 20px;
+}
 
-    display: block;
+.index-content img {
+    width: 100%;
     background-image: url('Imagens/teste.png');
-    width: 1200px;
-    height: 800px;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
 
     -webkit-filter: blur(15px);
     -moz-filter: blur(15px);
     -o-filter: blur(15px);
     -ms-filter: blur(15px);
     filter: blur(15px);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: orange;
+}
+
+.h2_mainpage {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+a, ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #FF8C00;
+    box-shadow: 0 0 4px #bbd0e2;
+    width: 35vh;
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*z-index: 99;*/
+    /*left: 0;*/
+    /*right: 0;*/
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+
+.Uni-Logo img {
+    width: 120px;
+    box-shadow: #121212;
+}
+
+.nav-links ul {
+    gap: 16px;
+
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: white;
+
+}
+
+.hover-link:active {
+    color: orangered;
 }

@@ -9,8 +9,8 @@
                     <li class="hover-link nav-item"><a href="login.php">Login</a></li>
                     <li class="hover-link nav-item"><a href="cadastroUser.php">Cadastro</a></li>
                 <?php endif; ?>
-                <li class="hover-link nav-item"><a href="mainpage.php">Início</a></li>
                 <?php if (isset($_SESSION['usuario_id'])): ?>
+                    <li class="hover-link nav-item"><a href="mainpage.php">Início</a></li>
                     <li class="hover-link nav-item"><a href="2fa.php">2FA</a></li>
                     <li class="hover-link nav-item"><a href="userpage.php">Minha Conta</a></li>
                     <?php if (isset($_SESSION['is_master']) && $_SESSION['is_master']): ?>
@@ -20,13 +20,12 @@
                 <?php endif; ?>
             </ul>
         </div>
-        <div class="search-bar flex">
-            <input type="text" class="news-input" placeholder="Pesquise">
-            <button class="search-button">Pesquisar</button>
+        <?php if (isset($_SESSION['usuario_id'])): ?>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" placeholder="Pesquise">
+                <button class="search-button">Pesquisar</button>
+            </div>
+        <?php endif; ?>
 
-            <!--                    <li><a href="userpage.php">Minha Conta</a></li>-->
-            <!--                    <li><a href="consultaUser.php">Consultar Usuários</a></li>-->
-            <!--                    <li><a href="logout.php">Sair</a></li>-->
-        </div>
     </div>
 </nav>
