@@ -12,10 +12,11 @@
     </head>
     <body>
 
-        <?php include 'header.php'; ?>
+
 
         <main>
 
+            <?php include 'header.php'; ?>
             <h2 class="h2_mainpage">Página Principal</h2>
 
             <div class="cards-container container flex">

@@ -1,46 +1,73 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['usuario_id'])) {
+        header("Location: login.php");
+        exit();
+    }
+
+    if (!isset($_SESSION['is_master']) || !$_SESSION['is_master']) {
+        if (!isset($_SESSION['otp'])) {
+            try {
+                $otp = bin2hex(random_bytes(4));
+            } catch (\Random\RandomException $e) {
+            }
+            $_SESSION['otp'] = $otp;
+        }
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $otp = $_POST['otp'];
+
+        if ($otp == $_SESSION['otp']) {
+            unset($_SESSION['otp']);
+            header("Location: mainpage.php");
+            exit();
+        } else {
+            echo "<script>
+                alert('Código de verificação incorreto.');
+              </script>";
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segundo fator de Autenticação</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    
-</head>
-<body>
-    
-    <nav>
-        <div class="main-nav container flex">
-            <a href="#" class="Uni-Logo">
-                <img src="Imagens/Unisuam LOGO.png" alt="Uni Logo">
-            </a>
-            <div class="nav-links">
-                <ul class="flex">
-                    <li class="hover-link nav-item"> <a href = "login.php"> Login</a> </li>
-                    <li class="hover-link nav-item"><a href= "cadastroUser.php">Cadastro</a></li>
-                    <li class="hover-link nav-item"><a href = "mainpage.php">Início</a></li>
-                    <li class="hover-link nav-item"><a href= 2fa.html>2FA</a></li>
-                    <li class="hover-link nav-item"><a href= "consultaUser.php">Consulta</a></li>
-                </ul>
-            </div>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="Pesquise">
-                <button class="search-button">Pesquisar</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Segundo Fator de Autenticação</title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
 
-            </div>
+        <?php include 'header.php'; ?>
+
+        <div>
+            <h2>Segundo Fator de Autenticação</h2>
+
+            <br>
+
+            <?php if (isset($_SESSION['is_master']) && $_SESSION['is_master']): ?>
+                <p>Você é um usuário master, não é necessário se autenticar.</p>
+                <a href="mainpage.php">Ir para a página principal</a>
+            <?php else: ?>
+                <p>Seu código de verificação será exibido em breve...</p>
+                <form action="2fa.php" method="post" id="otp-form" style="display:none;">
+                    <label for="otp">Código de Verificação:</label>
+                    <input type="text" id="otp" name="otp" required><br><br>
+                    <p>Insira o código acima para verificar.</p>
+                    <input type="submit" value="Verificar">
+                </form>
+                <script>
+                    setTimeout(function () {
+                        alert('Seu código de verificação é: <?php echo $_SESSION['otp']; ?>');
+                        document.getElementById('otp-form').style.display = 'block';
+                    }, 3000);
+                </script>
+            <?php endif; ?>
         </div>
-    </nav>
 
-    <h2>Segundo Fator de Autenticação</h2>
-    <form action="second_auth.php" method="post">
-        <label for="otp">Código de Verificação:</label>
-        <input type="text" id="otp" name="otp" required><br><br>
-        <p>Verifique o seu Email</p>
-        <input type="submit" value="Verificar">
-    </form>
-    
-
-
-
-</body>
+    </body>
 </html>
