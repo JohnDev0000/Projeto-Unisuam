@@ -18,24 +18,23 @@
 
         <?php include 'header.php'; ?>
 
-        <div class="form-container">
-            <form action="Scripts/getUser.php" method="get">
-                <label>Lista Todos os usuarios:</label>
-                <input type="submit" value="Pesquisar">
-            </form>
+        <div>
+            <div>
+                <form action="Scripts/getUser.php" method="get">
+                    <label>Lista Todos os usuarios:</label>
+                    <input type="submit" value="Pesquisar">
+                </form>
+            </div>
+
+            <br>
+
+            <div>
+                <form action="Scripts/getUserByName.php" method="get">
+                    <label for="nome">Pesquisar por Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite parte do nome...">
+                    <input type="submit" value="Pesquisar">
+                </form>
+            </div>
         </div>
-
-
-        <a href="Scripts/getUser.php"></a>
-
-
-
-<!--        <h3 style="color: white; padding: 0 20px 0 20px">Lista Usuario por ID:</h3><br>-->
-<!--        <form action="Scripts/getUserById.php" method="get">-->
-<!--            <label for="nome">Nome do Usuário:</label>-->
-<!--            <input type="text" id="nome" name="nome" required><br><br>-->
-<!---->
-<!--            <input type="submit" value="Pesquisar">-->
-<!--        </form>-->
     </body>
 </html>

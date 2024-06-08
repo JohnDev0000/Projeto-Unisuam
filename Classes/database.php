@@ -71,11 +71,11 @@
             return true;
         }
 
-        public function delete($where)
+        public function delete($where, $params = [])
         {
             $query = 'DELETE FROM ' . $this->table . ' WHERE ' . $where;
 
-            $this->execute($query);
+            $this->execute($query, $params);
 
             return true;
         }

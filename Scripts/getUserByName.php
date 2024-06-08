@@ -6,6 +6,11 @@
     $where = [];
     $params = [];
 
+    if (!empty($_GET['nome'])) {
+        $where[] = 'nome LIKE ?';
+        $params[] = '%' . $_GET['nome'] . '%';
+    }
+
     $where_clause = implode(' AND ', $where);
 
     $stmt = $database->select($where_clause, null, null, '*', $params);
@@ -14,4 +19,3 @@
 
     include 'getUserResult.php';
 ?>
-

@@ -86,6 +86,11 @@ body {
 }
 
 .form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+
     margin-bottom: 20px;
     max-width: 600px;
     background-color: #FF8C00;
@@ -93,6 +98,20 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
 }
 
 label {
@@ -120,22 +139,4 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.form-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
 
-.form-container button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.form-container button:hover {
-    background-color: #0056b3;
-}
