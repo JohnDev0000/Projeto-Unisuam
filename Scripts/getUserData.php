@@ -1,5 +1,5 @@
 <?php
-    include 'Classes/database.php';
+    include 'Classes/Database.php';
 
     $usuario_id = $_SESSION['usuario_id'];
 

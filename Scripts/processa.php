@@ -1,7 +1,16 @@
 <?php
-    include '../Classes/database.php';
+    include '../Classes/Database.php';
+    include '../Classes/ValidacaoCadastro.php';
+    session_start();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $erros = ValidacaoCadastro::validarFormulario($_POST);
+
+        if (count($erros) > 0) {
+            $_SESSION['erros'] = implode('<br>', $erros);
+            header("Location: ../cadastroUser.php");
+            exit();
+        }
 
         $database = new Database('usuarios');
 
@@ -36,16 +45,20 @@
         $insert_data = $database->insert($dados_form);
 
         if ($insert_data) {
-            echo "<script>
-                alert('Usuário cadastrado com sucesso. ID: {$insert_data}');
-                window.location.href = '../login.php';
-              </script>";
-            exit();
+            $_SESSION['sucesso'] = "Usuário cadastrado com sucesso. ID: {$insert_data}";
+            header("Location: ../login.php");
+//            echo "<script>
+//                alert('Usuário cadastrado com sucesso. ID: {$insert_data}');
+//                window.location.href = '../login.php';
+//              </script>";
         } else {
-            echo "<script>
-                alert('Erro ao cadastrar usuário.');
-                window.location.href = '../cadastroUser.php';
-              </script>";
+            $_SESSION['erro'] = "Erro ao cadastrar usuário.";
+            header("Location: ../cadastroUser.php");
+            //            echo "<script>
+//                alert('Erro ao cadastrar usuário.');
+//                window.location.href = '../cadastroUser.php';
+//              </script>";
         }
+        exit();
     }
 ?>

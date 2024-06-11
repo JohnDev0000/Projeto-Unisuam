@@ -12,7 +12,7 @@
 
         <?php include 'header.php'; ?>
 
-        <div>
+        <div style="margin-top: 150px">
             <h2 style="padding: 20px">Alteração de Senha</h2>
             <form action="Scripts/redefinirSenha_process.php" method="post">
 

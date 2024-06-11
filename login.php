@@ -15,22 +15,30 @@
 
         <?php include 'header.php'; ?>
 
-        <h2>Login do Usuário</h2>
-        <form action="Scripts/login_process.php" method="post">
-            <label for="login">Login:</label>
-            <input type="text" id="login" name="login" required><br><br>
+        <div><p><br></p></div>
+        <div><p><br></p></div>
+        <div><p><br></p></div>
+        <div><p><br></p></div>
 
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required><br><br>
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+            <h2 style="padding-bottom: 20px">Login do Usuário</h2>
 
-            <label for="admin_password">Senha de Administrador (Apenas Administradores):</label>
-            <input type="password" id="admin_password" name="admin_password"><br><br>
+            <form action="Scripts/login_process.php" method="post">
+                <label for="login">Login:</label>
+                <input type="text" id="login" name="login" required><br><br>
 
-            <p><a href="#" onclick="forgotPassword()">Esqueceu a senha?</a></p>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required><br><br>
 
-            <input type="submit" value="Login">
+                <label for="admin_password">Senha de Administrador (Apenas Administradores):</label>
+                <input type="password" id="admin_password" name="admin_password"><br><br>
 
-        </form>
+                <p><a href="#" onclick="forgotPassword()">Esqueceu a senha?</a></p>
+
+                <input type="submit" value="Login">
+
+            </form>
+        </div>
 
         <script>
             function forgotPassword() {

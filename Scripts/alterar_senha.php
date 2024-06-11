@@ -1,5 +1,5 @@
 <?php
-    include '../Classes/database.php';
+    include '../Classes/Database.php';
     session_start();
 
     $response = ['success' => false, 'message' => ''];

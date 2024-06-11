@@ -18,7 +18,8 @@
 
         <?php include 'header.php'; ?>
 
-        <div>
+
+        <div style="margin-top: 200px">
             <div>
                 <form action="Scripts/getUser.php" method="get">
                     <label>Lista Todos os usuarios:</label>

@@ -1,5 +1,5 @@
 <?php
-    include '../Classes/database.php';
+    include '../Classes/Database.php';
     session_start();
 
     // Usuario comum nunca conseguiria acessar essa funcionalidade, pois não tem permissão

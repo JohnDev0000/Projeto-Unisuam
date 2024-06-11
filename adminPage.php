@@ -18,6 +18,8 @@
             include 'header.php';
         ?>
 
+        <br>
+
         <div style="display: flex; flex-direction: row; justify-content: center; align-items: center">
             <?php include 'Scripts/integrantes.php'; ?>
 

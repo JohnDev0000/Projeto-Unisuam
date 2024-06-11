@@ -1,5 +1,5 @@
 <?php
-    include '../Classes/database.php';
+    include '../Classes/Database.php';
 
     $database = new Database('usuarios');
 
