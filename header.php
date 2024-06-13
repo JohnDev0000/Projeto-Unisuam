@@ -22,8 +22,8 @@
         </div>
         <?php if (isset($_SESSION['usuario_id'])): ?>
             <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="Pesquise">
-                <button class="search-button">Pesquisar</button>
+                <input type="text" class="news-input" id="searchInput" placeholder="Pesquise">
+                <button class="search-button" onclick="searchNews()">Pesquisar</button>
             </div>
         <?php endif; ?>
 

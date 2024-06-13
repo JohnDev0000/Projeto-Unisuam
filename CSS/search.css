@@ -1,0 +1,8 @@
+.card.search-result {
+    margin: 15px;
+}
+
+.card.search-result .news-title {
+    color: #007bff;
+}
+

@@ -9,12 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projeto Gaming News</title>
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/search.css">
+        <script src="JavaScript/search.js" defer></script>
     </head>
     <body>
-
-
         <main>
-
             <?php include 'header.php'; ?>
             <h2 class="h2_mainpage">Página Principal</h2>
 
@@ -119,7 +118,9 @@
                         <h6 class="news-source" id="news-source">A FromSoftware está celebrando a nova conquista de
                             Recentemente, a BioWare e a EA decidiram trocar o nome de Dragon Age: Dreadwolf para Dragon
                             Age: The Veilguard.
-                        <p></p>
+
+                            <p></p>
+
                             Agora, durante um evento próprio de Dragon Age: The Veilguard apresentado
                             pela EA nesta terça-feira (11), foi possível ver o primeiro e intenso gameplay da
                             sequência em um vídeo com mais de 20 minutos de duração.
