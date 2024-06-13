@@ -32,6 +32,7 @@
             </div>
 
             <a href="trocarSenha.php" style=" padding: 20px; margin-top: 50px"><h3 style="color: orange;">Alterar Senha</h3></a>
+            <a href="modelo_bd.php" style=" padding: 20px; margin-top: 50px"><h3 style="color: orange;">Modelo BD</h3></a>
         </div>
     </body>
 </html>

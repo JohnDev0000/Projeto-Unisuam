@@ -13,7 +13,6 @@
     <body>
 
 
-
         <main>
 
             <?php include 'header.php'; ?>
@@ -85,6 +84,49 @@
                         <p class="news-desc" id="news-desc"> 16/04/2024</p>
                         <a href="https://www.adrenaline.com.br/games/assassins-creed-mirage-pode-ser-testado-de-graca-ate-30-de-abril/"
                            target="_blank">Visite Adrenaline</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="Imagens/eldenring.jpg" alt="news-image" id="news-img"><a
+                                href="https://www.adrenaline.com.br/games/elden-ring-25-milhoes-de-unidades-vendidas/"
+                                target="_blank">
+                    </div>
+                    <div class="card-content">
+                        <h3 id="news-title">Elden Ring atinge a marca de 25 milhões de unidades vendidas </h3>
+                        <h6 class="news-source" id="news-source">A FromSoftware está celebrando a nova conquista de
+                            Elden Ring,
+                            que vendeu mais de 25 milhões de unidades em todo o planeta.
+                            Lançado em 2022 e vencedor do “Jogo do Ano” na The Game Awards daquele período,
+                            o soulslike tem alcançado números cada vez maiores graças à
+                            nova expansão que chegará: Shadow of the Erdtree.
+                        </h6>
+                        <p class="news-desc" id="news-desc"> 12/06/2024 </p>
+                        <a href="https://www.adrenaline.com.br/games/elden-ring-25-milhoes-de-unidades-vendidas/"
+                           target="_blank">Visite Adrenaline</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="Imagens/dragonage.jpg" alt="news-image" id="news-img"><a
+                                href="https://www.tecmundo.com.br/voxel/284844-primeiro-gameplay-dragon-age-the-veilguard-revelado-assista.htm"
+                                target="_blank">
+                    </div>
+                    <div class="card-content">
+                        <h3 id="news-title"> Primeiro gameplay de Dragon Age: The Veilguard é revelado! </h3>
+                        <h6 class="news-source" id="news-source">A FromSoftware está celebrando a nova conquista de
+                            Recentemente, a BioWare e a EA decidiram trocar o nome de Dragon Age: Dreadwolf para Dragon
+                            Age: The Veilguard.
+                        <p></p>
+                            Agora, durante um evento próprio de Dragon Age: The Veilguard apresentado
+                            pela EA nesta terça-feira (11), foi possível ver o primeiro e intenso gameplay da
+                            sequência em um vídeo com mais de 20 minutos de duração.
+                        </h6>
+                        <p class="news-desc" id="news-desc"> 11/06/2024 </p>
+                        <a href="https://www.tecmundo.com.br/voxel/284844-primeiro-gameplay-dragon-age-the-veilguard-revelado-assista.htm"
+                           target="_blank">Visite Voxel</a>
                     </div>
                 </div>
 
