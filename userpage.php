@@ -31,8 +31,11 @@
                 <?php include 'Scripts/getUserData.php'; ?>
             </div>
 
-            <a href="trocarSenha.php" style=" padding: 20px; margin-top: 50px"><h3 style="color: orange;">Alterar Senha</h3></a>
-            <a href="modelo_bd.php" style=" padding: 20px; margin-top: 50px"><h3 style="color: orange;">Modelo BD</h3></a>
+            <div style="padding: 20px; margin-top: 50px">
+                <a href="trocarSenha.php"><h3 style="color: orange;">Alterar Senha</h3></a>
+                <a href="modelo_bd.php"><h3 style="color: orange;">Modelo BD</h3></a>
+                <a href="Scripts/gerar_pdf.php" target="_blank"><h3 style="color: orange;">Baixar Lista de Usuários em PDF</h3></a>
+            </div>
         </div>
     </body>
 </html>
